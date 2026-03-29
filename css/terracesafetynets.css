@@ -1,0 +1,316 @@
+/* ======================================
+   TERRACE SAFETY NETS – MODERN STYLING
+====================================== */
+/* ======================================
+   TERRACE SAFETY NETS HERO
+====================================== */
+
+#terrace-hero {
+  position: relative;
+  height: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+
+  background: linear-gradient(90deg, #2f855a 100%);
+}
+
+/* overlay */
+.terrace-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.15);
+  z-index: 1;
+}
+
+/* container */
+.terrace-hero-container {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  max-width: 900px;
+  width: 100%;
+  padding: 75px 20px 0;
+
+  opacity: 0;
+  transform: translateX(-40px);
+  animation: terrace-slide-in 1s ease-out forwards;
+}
+
+/* animation */
+@keyframes terrace-slide-in {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+/* title */
+.terrace-hero-title {
+  font-size: 2.6rem;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 5px;
+}
+
+/* text */
+.terrace-hero-text {
+  font-size: 1.1rem;
+  color: #f1f1f1;
+  line-height: 1.6;
+}
+
+/* buttons */
+.terrace-hero-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+/* button base */
+.terrace-btn {
+  padding: 11px 28px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+/* call button */
+.terrace-btn-call {
+  background: rgb(216,216,123);
+  color: black;
+}
+
+.terrace-btn-call:hover {
+  background: rgb(229,229,99);
+  transform: translateY(-2px);
+}
+
+/* whatsapp */
+.terrace-btn-whatsapp {
+  background: #52a76e;
+  color: white;
+}
+
+.terrace-btn-whatsapp:hover {
+  background: #307149;
+  transform: translateY(-2px);
+}
+
+/* responsive */
+@media (max-width:768px){
+  #terrace-hero{height:260px;}
+  .terrace-hero-title{font-size:2rem;}
+}
+
+@media (max-width:480px){
+  #terrace-hero{height:230px;}
+  .terrace-hero-title{font-size:1.7rem;}
+}
+.colors{
+  color:black;
+}
+
+
+
+/* ================= INTRO ================= */
+.terrace-intro{
+  background-color: #f0f3f6;
+}
+.terrace-intro h2 {
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #1f2a3a;
+}
+
+.terrace-intro p {
+  color: black;
+  line-height: 1.7;
+}
+
+.terrace-img {
+  width: 100%;
+  max-width: 500px;     /* 👈 reduced size */
+  aspect-ratio: 1 / 1;  /* 👈 square shape */
+  object-fit: cover;    /* 👈 no distortion */
+  border-radius: 10px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+  display: block;
+  margin: 0 auto;       /* 👈 center align */
+}
+
+/* Points list */
+.terrace-points {
+  padding-left: 20px;
+}
+
+.terrace-points li {
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+.color{
+  color:#1f2a3a;
+}
+.terrace-benefits h2 {
+  position: relative;
+  display: inline-block;
+}
+
+.terrace-benefits h2::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -10px;
+  transform: translateX(-50%);
+  width: 60px;          /* 👈 line length */
+  height: 3px;          /* 👈 thickness */
+  background-color: #1f2a3a;  /* 👈 color */
+  border-radius: 2px;
+}
+
+/* ================= BENEFITS SECTION ================= */
+
+.terrace-benefits {
+  background: #f2f2f2;
+  padding: 80px 0;
+}
+
+/* Benefit cards */
+.benefit-card {
+  background: #89b299;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+.benefit-card:hover {
+  transform: translateY(-8px);
+}
+
+.benefit-card h5 {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+
+/* ================= CONTACT FORM ================= */
+.terrace-contact{
+  background-color: #ecf1eb;
+}
+
+.terrace-form input,
+.terrace-form textarea {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.terrace-form textarea {
+  height: 120px;
+  resize: none;
+}
+
+.terrace-form button {
+  background: #f57c00;
+  color: white;
+  border: none;
+  padding: 14px 30px;
+  border-radius: 8px;
+  font-weight: 600;
+  width: 100%;
+  transition: 0.3s;
+}
+
+.terrace-form button:hover {
+  background: #e56f00;
+}
+
+.terrace-contact h2 {
+  position: relative;
+  display: inline-block;
+}
+
+.terrace-contact h2::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -10px;
+  transform: translateX(-50%);
+  width: 60px;          /* 👈 underline length */
+  height: 3px;          /* 👈 thickness */
+  background-color: #1f2a3a;  /* 👈 color */
+  border-radius: 2px;
+}
+
+/* ================= MOBILE RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+
+  .terrace-intro h2 {
+    font-size: 24px;
+  }
+
+  .terrace-benefits {
+    padding: 60px 0;
+  }
+}
+
+
+
+
+/* ======================================
+   TERRACE HERO MOBILE FIX (FINAL)
+====================================== */
+
+#terrace-hero {
+  min-height: 420px !important;
+  height: auto !important;
+  padding: 100px 0 60px !important;
+}
+
+.terrace-hero-container {
+  padding-top: 0 !important;
+}
+
+@media (max-width: 768px) {
+
+  #terrace-hero {
+    min-height: 500px !important;
+    padding: 120px 20px 80px !important;
+  }
+
+  .terrace-hero-title {
+    font-size: 1.8rem;
+    line-height: 1.3;
+  }
+
+  .terrace-hero-text {
+    font-size: 0.95rem;
+    margin-top: 10px;
+  }
+
+  .terrace-hero-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .terrace-btn {
+    width: 100%;
+    font-size: 0.95rem;
+    padding: 10px 20px;
+  }
+}

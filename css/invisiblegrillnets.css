@@ -1,0 +1,371 @@
+/* ======================================
+   INVISIBLE GRILL NETS HERO
+====================================== */
+
+#invisible-hero {
+  position: relative;
+  height: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+
+  background: linear-gradient(90deg, #3ebf85 100%);
+}
+
+/* overlay */
+.invisible-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.15);
+  z-index: 1;
+}
+
+/* container */
+.invisible-hero-container {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  max-width: 900px;
+  width: 100%;
+  padding: 75px 20px 0;
+
+  opacity: 0;
+  transform: translateX(-40px);
+  animation: invisible-slide-in 1s ease-out forwards;
+}
+
+/* animation */
+@keyframes invisible-slide-in {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* title */
+.invisible-hero-title {
+  font-size: 2.6rem;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 5px;
+}
+
+/* text */
+.invisible-hero-text {
+  font-size: 1.1rem;
+  color: #f1f1f1;
+  line-height: 1.6;
+}
+
+/* buttons */
+.invisible-hero-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+/* button base */
+.invisible-btn {
+  padding: 11px 28px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+/* call button */
+.invisible-btn-call {
+  background: rgb(216,216,123);
+  color: black;
+}
+
+.invisible-btn-call:hover {
+  background: rgb(229,229,99);
+  transform: translateY(-2px);
+}
+
+/* whatsapp */
+.invisible-btn-whatsapp {
+  background: #52a76e;
+  color: white;
+}
+
+.invisible-btn-whatsapp:hover {
+  background: #307149;
+  transform: translateY(-2px);
+}
+
+/* responsive */
+@media (max-width:768px){
+  #invisible-hero{height:260px;}
+  .invisible-hero-title{font-size:2rem;}
+}
+
+@media (max-width:480px){
+  #invisible-hero{height:230px;}
+  .invisible-hero-title{font-size:1.7rem;}
+}
+
+
+
+/* ======================================
+   SECOND HERO STYLE (OPTIONAL)
+====================================== */
+
+.invisible-hero {
+  background: #1e88e5 url("../images/invisible-banner.jpg") center/cover no-repeat;
+  color: white;
+  padding: 120px 0 90px;
+  margin-top: 80px;
+}
+
+.invisible-hero h1 {
+  font-size: 42px;
+  font-weight: 700;
+}
+
+.invisible-hero p {
+  max-width: 700px;
+  margin: 15px auto 30px;
+  opacity: 0.9;
+}
+
+.hero-buttons a {
+  padding: 12px 28px;
+  margin: 10px;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.hero-call {
+  background: #ffc107;
+  color: #111;
+}
+
+.hero-whatsapp {
+  background: #25d366;
+  color: white;
+}
+
+
+/* ================= INTRO ================= */
+.invisible-intro h2 {
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.invisible-intro p {
+  color: #555;
+  line-height: 1.7;
+}
+
+.invisible-img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.invisible-points li {
+  margin-bottom: 10px;
+}
+
+
+/* ================= BENEFITS ================= */
+
+.why-card {
+  transition: all 0.3s ease;
+  
+}
+
+.why-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+.why-invisible {
+  animation: fadeUp 1s ease-in-out;
+  
+}
+.why-card {
+  background: #89b299; /* very light blue */
+}
+.why-invisible h2 {
+  position: relative;
+  display: inline-block;
+}
+
+.why-invisible h2::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: #1f2a3a;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* ================= CONTACT ================= */
+/* Section spacing & background */
+section.py-5 {
+  background: #f9fbfd;
+}
+
+/* Heading styling */
+section h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #0d1b2a;
+  position: relative;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+/* Center underline */
+section h2::after {
+  content: "";
+  width: 70px;
+  height: 3px;
+  background: #1f2a3a;
+  display: block;
+  margin-top: 8px;
+  border-radius: 2px;
+}
+
+/* Paragraph styling */
+p {
+  color: #1f2a3a;
+  font-size: 16px;
+  line-height: 1.7;
+}
+.footer-desc{
+  color:white
+
+}
+
+/* Form styling */
+.form-control {
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  padding: 10px;
+  transition: all 0.3s ease;
+}
+
+/* Input focus effect */
+.form-control:focus {
+  border-color: #1f2a3a;
+  box-shadow: 0 0 8px rgba(0,123,255,0.2);
+}
+
+/* Button styling */
+.btn-primary {
+  background: #c78427;
+  border: none;
+  padding: 10px 20px;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+/* Button hover */
+.btn-primary:hover {
+  background: #da9814;
+  transform: translateY(-2px);
+}
+
+/* Image styling */
+section img {
+  max-width: 280px;
+  transition: 0.4s ease;
+}
+
+/* Image hover */
+section img:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive fix */
+@media (max-width: 768px) {
+  section h2 {
+    font-size: 24px;
+  }
+
+  section img {
+    margin-top: 20px;
+  }
+}
+
+
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+  .invisible-hero h1 {
+    font-size: 28px;
+  }
+  .invisible-hero {
+    padding: 90px 0 60px;
+  }
+}
+
+
+/* ======================================
+   INVISIBLE HERO MOBILE FIX (FINAL)
+====================================== */
+
+#invisible-hero {
+  min-height: 420px !important;
+  height: auto !important;
+  padding: 100px 0 60px !important;
+}
+
+.invisible-hero-container {
+  padding-top: 0 !important;
+}
+
+@media (max-width: 768px) {
+
+  #invisible-hero {
+    min-height: 500px !important;
+    padding: 120px 20px 80px !important;
+  }
+
+  .invisible-hero-title {
+    font-size: 1.8rem;
+    line-height: 1.3;
+  }
+
+  .invisible-hero-text {
+    font-size: 0.95rem;
+    margin-top: 10px;
+  }
+
+  .invisible-hero-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .invisible-btn {
+    width: 100%;
+    font-size: 0.95rem;
+    padding: 10px 20px;
+  }
+}

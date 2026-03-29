@@ -1,0 +1,339 @@
+/* ================= HERO ================= */
+/* ======================================
+   CRICKET SAFETY NETS HERO
+====================================== */
+
+#cricket-hero {
+  position: relative;
+  height: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+
+  background: linear-gradient(90deg, #0b3c7a 100%);
+}
+
+/* overlay */
+.cricket-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.15);
+  z-index: 1;
+}
+
+/* container */
+.cricket-hero-container {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  max-width: 900px;
+  width: 100%;
+  padding: 75px 20px 0;
+
+  opacity: 0;
+  transform: translateX(-40px);
+  animation: cricket-slide-in 1s ease-out forwards;
+}
+
+/* animation */
+@keyframes cricket-slide-in {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* title */
+.cricket-hero-title {
+  font-size: 2.6rem;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 5px;
+}
+
+/* text */
+.cricket-hero-text {
+  font-size: 1.1rem;
+  color: #f1f1f1;
+  line-height: 1.6;
+}
+
+/* buttons */
+.cricket-hero-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+/* button base */
+.cricket-btn {
+  padding: 11px 28px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+/* call button */
+.cricket-btn-call {
+  background: rgb(216,216,123);
+  color: black;
+}
+
+.cricket-btn-call:hover {
+  background: rgb(229,229,99);
+  transform: translateY(-2px);
+}
+
+
+/* whatsapp */
+.cricket-btn-whatsapp {
+  background: #52a76e;
+  color: white;
+}
+
+.cricket-btn-whatsapp:hover {
+  background: #307149;
+  transform: translateY(-2px);
+}
+
+/* responsive */
+@media (max-width:768px){
+  #cricket-hero{height:260px;}
+  .cricket-hero-title{font-size:2rem;}
+}
+
+@media (max-width:480px){
+  #cricket-hero{height:230px;}
+  .cricket-hero-title{font-size:1.7rem;}
+}
+
+
+
+
+
+
+.cricket-hero {
+  background: #1e88e5 url("../images/cricket-banner.jpg") center/cover no-repeat;
+  color: white;
+  padding: 120px 0 90px;
+  margin-top: 80px;
+}
+
+.cricket-hero h1 {
+  font-size: 42px;
+  font-weight: 700;
+}
+
+.cricket-hero p {
+  max-width: 700px;
+  margin: 15px auto 30px;
+  opacity: 0.9;
+}
+
+.hero-buttons a {
+  padding: 12px 28px;
+  margin: 10px;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.hero-call {
+  background: #ffc107;
+  color: #111;
+}
+
+.hero-whatsapp {
+  background: #25d366;
+  color: white;
+}
+
+
+/* ================= INTRO ================= */
+.cricket-intro h2 {
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.cricket-intro p {
+  color: #080808;
+  line-height: 1.7;
+}
+
+.cricket-img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+.cricket-imgg{
+      width: 500px; /* 👈 reduced size */ 
+      aspect-ratio: 1 / 1; 
+      object-fit: cover;
+      border-radius: 10px; 
+      box-shadow: 0 8px 25px rgba(0,0,0,0.1); 
+      display: block; 
+      margin: 0 auto; /* 👈 center the image */ 
+}
+
+.cricket-points li {
+  margin-bottom: 10px;
+}
+.cricket-intro {
+  background-color: rgb(228, 230, 233);
+
+}
+.section-title {
+  position: relative;
+  display: inline-block;
+  font-weight: 700;
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 60px;          /* 👈 underline length */
+  height: 3px;          /* 👈 thickness */
+  background: #1f2a3a;  /* 👈 color (change if needed) */
+  margin: 8px auto 0;   /* 👈 center align */
+  border-radius: 2px;
+}
+
+
+/* ================= BENEFITS ================= */
+.cricket-benefits {
+  background: #074e80;
+  padding: 80px 0;
+}
+
+.benefit-card {
+  background: #89b299;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+.benefit-card:hover {
+  transform: translateY(-8px);
+}
+
+.benefit-card h5 {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+/* .col-md-3{
+  background-color: #89b299;
+} */
+
+/* ================= CONTACT ================= */
+.cricket-contact input,
+.cricket-contact textarea {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.cricket-contact textarea {
+  height: 120px;
+}
+
+.cricket-contact button {
+  background: #ffc107;
+  color: #111;
+  border: none;
+  padding: 14px 30px;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+.col-md-6{
+  color:#1f2a3a;
+
+}
+.footer-desc{
+  color: #ffffff;
+}
+.footer-box{
+  color: white;
+}
+.middle-underline {
+  position: relative;
+  display: inline-block;
+}
+
+.middle-underline::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -8px;
+  transform: translateX(-50%);
+  width: 50px;          /* 👈 underline size */
+  height: 3px;          /* 👈 thickness */
+  background-color: #1f2a3a;  /* 👈 color */
+  border-radius: 2px;
+}
+.cricket-contact{
+  background-color: #eceeef;
+}
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+  .cricket-hero h1 {
+    font-size: 28px;
+  }
+  .cricket-hero {
+    padding: 90px 0 60px;
+  }
+}
+
+/* ======================================
+   CRICKET HERO MOBILE FIX (SAME AS BN)
+====================================== */
+
+#cricket-hero {
+  min-height: 420px !important;
+  height: auto !important;
+  padding: 100px 0 60px !important;
+}
+
+.cricket-hero-container {
+  padding-top: 0 !important;
+}
+
+@media (max-width: 768px) {
+
+  #cricket-hero {
+    min-height: 500px !important;
+    padding: 120px 20px 80px !important;
+  }
+
+  .cricket-hero-title {
+    font-size: 1.8rem;
+    line-height: 1.3;
+  }
+
+  .cricket-hero-text {
+    font-size: 0.95rem;
+    margin-top: 10px;
+  }
+
+  .cricket-hero-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .cricket-btn {
+    width: 100%;
+  }
+}

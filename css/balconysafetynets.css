@@ -1,0 +1,438 @@
+/* ======================================
+   BALCONY SAFETY NETS – MODERN STYLING
+   (CONTENT ONLY – NO MAIN CSS AFFECTED)
+====================================== */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+
+/* ======================================
+   BALCONY NET HERO – CENTER FIX
+====================================== */
+
+#bn-hero {
+  position: relative;
+  height: 320px;
+  display: flex;
+  align-items: center;       /* vertical center */
+  justify-content: center;   /* horizontal center */
+  overflow: hidden;
+
+  background: linear-gradient(
+    90deg,
+    #0b3c7a 100%
+  );
+}
+
+/* Light overlay (not blocking buttons) */
+.bn-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.15);
+  z-index: 1;
+}
+
+/* CONTENT – EXACT CENTER */
+.bn-hero-container {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  max-width: 900px;
+  width: 100%;
+  padding: 0 20px;
+
+  opacity: 0;
+  transform: translateX(-40px);
+  animation: bn-slide-in 1s ease-out forwards;
+}
+
+/* Slide animation */
+@keyframes bn-slide-in {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.bn-hero-container {
+  padding-top: 75px;   /* 👈 moves title + para down */
+}
+
+
+
+
+
+/* TITLE */
+.bn-hero-title {
+  font-size: 2.6rem;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 2px;
+}
+
+/* TEXT */
+.bn-hero-text {
+  font-size: 1.1rem;
+  color: #f1f1f1;
+  margin-bottom: 1px;
+  line-height: 1.6;
+}
+
+/* BUTTON WRAPPER */
+.bn-hero-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+/* BASE BUTTON */
+.bn-btn {
+  display: inline-block;
+  padding: 11px 28px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 6px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* CALL BUTTON */
+.bn-btn-call {
+  background-color: rgb(216, 216, 123);
+  color: #000;
+}
+
+.bn-btn-call:hover {
+  background-color: rgb(229, 229, 99);
+  transform: translateY(-2px);
+}
+
+/* WHATSAPP BUTTON */
+.bn-btn-whatsapp {
+  background-color: #52a76e;
+  color: #fff;
+}
+
+.bn-btn-whatsapp:hover {
+  background-color: #307149;
+  transform: translateY(-2px);
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+
+
+
+
+
+
+
+
+/* Page wrapper */
+.balcony-page {
+  padding-top: 40px;
+  overflow-x: hidden;
+}
+
+/* Section spacing */
+.balcony-section {
+  padding: 90px 0;
+}
+.balcony-section1{
+  background-color: #dce5eb;
+}
+
+/* Center alignment helper */
+.balcony-section .row {
+  min-height: 420px;
+}
+
+
+
+
+
+/* Titles */
+.balcony-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+/* underline accent */
+.balcony-title::after {
+  content: "";
+  width: 60px;
+  height: 4px;
+  background: #1f2a3a;
+  display: block;
+  margin-top: 8px;
+  border-radius: 5px;
+}
+
+/* Text */
+.balcony-text {
+  font-size: 1.05rem;
+  line-height: 1.9;
+  color: black;
+  margin-bottom: 20px;
+}
+
+/* List */
+.balcony-list {
+  color:black;
+  list-style: none;
+  padding-left: 0;
+}
+
+.balcony-list li {
+  padding-left: 28px;
+  margin-bottom: 12px;
+  position: relative;
+  font-weight: 500;
+}
+
+.balcony-list li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  top: 2px;
+  color: #28a745;
+  font-size: 1rem;
+}
+
+/* Feature grid */
+.balcony-features {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+  margin-top: 20px;
+}
+
+.feature-box {
+  background: #ffffff;
+  padding: 14px 16px;
+  border-radius: 8px;
+  font-weight: 500;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+}
+
+/* Images */
+.balcony-image,
+.balcony-contact-image {
+  width: 100%;
+  max-width: 360px;
+  margin: auto;
+  border-radius: 14px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+  object-fit: cover;
+  animation: fadeZoom 1s ease forwards;
+}
+
+
+
+
+/* Image hover animation */
+.balcony-image:hover,
+.balcony-contact-image:hover {
+  transform: scale(1.04);
+  transition: transform 0.4s ease;
+}
+
+/* Fade + Zoom on load */
+@keyframes fadeZoom {
+  from {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Contact section */
+.balcony-contact {
+  padding: 100px 0;
+  background: linear-gradient(135deg, #f0eeee, #ffffff);
+}
+
+/* Form */
+.balcony-form {
+  background: #e3e1e1;
+  padding: 30px;
+  border-radius: 14px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.balcony-form input,
+.balcony-form textarea {
+  width: 100%;
+  padding: 14px 16px;
+  margin-bottom: 14px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 0.95rem;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.balcony-form input:focus,
+.balcony-form textarea:focus {
+  outline: none;
+  border-color: #f0ad4e;
+  box-shadow: 0 0 0 3px rgba(240,173,78,0.25);
+}
+
+.balcony-form textarea {
+  height: 120px;
+  resize: none;
+}
+
+/* Button */
+.balcony-form button {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(135deg, #f0ad4e, #ec971f);
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.balcony-form button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(240,173,78,0.5);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .balcony-title {
+    font-size: 1.8rem;
+  }
+
+  .balcony-section {
+    padding: 60px 0;
+  }
+
+  .balcony-image,
+  .balcony-contact-image {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .balcony-features {
+    grid-template-columns: 1fr;
+  }
+}
+/* Feature Box Styling */
+.balcony-features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.feature-box {
+  background: #eef2f6;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #1f2a3a;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+/* Tick mark color */
+.feature-box::before {
+  content: "✔";
+  color: #1ca53c; /* green tick */
+  margin-right: 8px;
+  font-weight: bold;
+}
+
+/* Remove duplicate ✔ from HTML (optional but better) */
+.feature-box {
+  position: relative;
+  padding-left: 20px;
+}
+
+/* Hover effect */
+.feature-box:hover {
+  background: #e9f7ef;
+  transform: translateY(-3px);
+}
+
+
+.balcony-form input,
+.balcony-form textarea {
+  width: 100%;
+  padding: 8px 10px;   /* smaller padding */
+  font-size: 14px;     /* smaller text */
+  margin-bottom: 10px;
+}
+
+  
+
+
+
+/* ======================================
+   HERO MOBILE FIX (FINAL FIX)
+====================================== */
+
+#bn-hero {
+  min-height: 420px !important;
+  height: auto !important;
+  padding: 100px 0 60px !important;
+}
+
+.bn-hero-container {
+  padding-top: 0 !important;
+}
+
+@media (max-width: 768px) {
+
+  #bn-hero {
+    min-height: 500px !important;
+    padding: 120px 20px 80px !important;
+  }
+
+  .bn-hero-title {
+    font-size: 1.8rem;
+    line-height: 1.3;
+  }
+
+  .bn-hero-text {
+    font-size: 0.95rem;
+    margin-top: 10px;
+  }
+
+  .bn-hero-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .bn-btn {
+    width: 100%;
+  }
+}
