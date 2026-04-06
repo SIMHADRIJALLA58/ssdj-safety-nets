@@ -369,3 +369,76 @@ section img:hover {
     padding: 10px 20px;
   }
 }
+
+
+.duct-location-section {
+  padding: 60px 0;
+  background: #f9fafc;
+}
+
+/* LEFT SIDE */
+.location-links-box {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.location-links-box h4 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.location-links-box ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.location-links-box ul li {
+  margin-bottom: 10px;
+}
+
+.location-links-box ul li a {
+  text-decoration: none;
+  color: #333;
+  display: block;
+  padding: 8px 10px;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+/* Hover effect */
+.location-links-box ul li a:hover {
+  background: #ff4da6;
+  color: #fff;
+  padding-left: 15px;
+}
+
+/* RIGHT SIDE */
+.duct-content-box {
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.duct-content-box h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.duct-content-box p {
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 15px;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .location-links-box {
+    margin-bottom: 20px;
+  }
+}

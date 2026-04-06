@@ -94,3 +94,50 @@ scrollTopBtn.addEventListener("click", function(e){
 
 
 
+
+
+
+const form = document.getElementById('contactForm');
+const result = document.getElementById('result');
+const btn = document.getElementById('submitBtn');
+
+form.addEventListener('submit', function(e) {
+  e.preventDefault();
+
+  // Button loading state
+  btn.innerText = "Sending...";
+  btn.disabled = true;
+
+  const formData = new FormData(form);
+
+  fetch('https://api.web3forms.com/submit', {
+    method: 'POST',
+    body: formData
+  })
+  .then(response => response.json())
+  .then(data => {
+    if (data.success) {
+      result.innerHTML = "<p style='color:green;'>✅ Message sent successfully!</p>";
+      form.reset();
+    } else {
+      result.innerHTML = "<p style='color:red;'>❌ Something went wrong!</p>";
+    }
+  })
+  .catch(() => {
+    result.innerHTML = "<p style='color:red;'>❌ Network error!</p>";
+  })
+  .finally(() => {
+    btn.innerText = "Send Message";
+    btn.disabled = false;
+  });
+});
+
+
+
+
+
+
+ AOS.init({
+    duration: 1000,
+    once: true
+  });
