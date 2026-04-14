@@ -1,0 +1,15 @@
+{
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "ssdj-safety-nets.vercel.app"
+        }
+      ],
+      "destination": "https://ssdjsafetynets.in/$1",
+      "permanent": true
+    }
+  ]
+}
