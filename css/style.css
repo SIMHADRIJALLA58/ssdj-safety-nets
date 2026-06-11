@@ -1918,3 +1918,17 @@ body {
     gap: 12px;
     z-index: 99999 !important;
 }
+
+
+
+
+
+.designer-link {
+    color: inherit;      /* Use your current text color */
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.designer-link:hover {
+    text-decoration: underline;
+}
